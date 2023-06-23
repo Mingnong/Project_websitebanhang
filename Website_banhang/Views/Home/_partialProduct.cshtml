@@ -1,0 +1,28 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@if (Model != null)
+{
+    int i = 0;
+    <div class="col-6 col-md-9">
+    <div class="container">
+        <ul class="row row-cols-4" style="list-style-type: none;">
+    
+            @foreach(var item in Model)
+    {
+            <li class="col mb-3">
+                <div class="card text-center" style="width: 13rem;">
+                            <a href="@Url.Action("Details", "Product", new {ProductId = item.ProductId})"><img src="@item.ProductImage" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                            <p class="card-text">@item.ProductName.</p>
+                            <p class="card-text">@item.ProductPrice.</p>
+                    </div>
+                </div>
+            </li>       
+    }
+        </ul>
+    </div>
+</div>
+}

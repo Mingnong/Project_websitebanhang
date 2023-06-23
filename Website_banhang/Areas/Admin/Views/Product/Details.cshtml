@@ -1,0 +1,40 @@
+﻿@model Website_banhang.Models.Product;
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@if(Model != null)
+{
+    
+<form method="POST", action="@Url.Action("Update", "Product", new { area = "Admin", productId = Model.ProductId})">
+
+    <div class="mb-3">
+        <label for="product_name" class="form-label">Tên Sản Phẩm</label>
+            <input type="text" class="form-control" id="product_name" name="ProductName" value="@Model.ProductName">
+    </div>
+    <div class="mb-3">
+        <label for="product_price" class="form-label">Giá Sản Phẩm</label>
+            <input type="number" class="form-control" id="product_price" name="ProductPrice" value="@Model.ProductPrice">
+    </div>
+    <div class="mb-3">
+        <label for="product_des" class="form-label">Miêu Tả Sản Phẩm</label>
+            <input type="text" class="form-control" id="product_des" name="ProductDescription" value="@Model.ProductDescription">
+    </div>
+
+
+
+@*    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="isActive" name="isActive">
+        <label class="form-check-label" for="exampleCheck1">Ẩn Sản Phẩm</label>
+    </div>*@
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+} else
+{
+    <h1>Sản phẩm không tồn tại</h1>
+}
+

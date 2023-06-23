@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Website_banhang.Models.Product>;
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@if(Model != null)
+{
+
+<h1>PRODUCTS</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Product Name</th>
+            <th scope="col">Product Price</th>
+            <th scope="col">Product Description</th>
+            <th scope="col">Product Image</th>
+        </tr>
+    </thead>
+        @foreach(var item in Model)
+        {
+        <tbody>
+        <tr>
+            <th scope="row">@item.ProductName</th>
+                    <td>@item.ProductPrice</td>
+                    <td>@item.ProductDescription</td>
+                    <td><img style="height: 8rem" src="@item.ProductImage"/></td>
+                    <td><a href="@Url.Action("Details", "Product", new { ProductId = item.ProductId })">Edit</a></td>
+
+        </tr>
+    </tbody>       
+        }
+    </table>
+}else
+{
+    <h1>không tìm thấy sản phẩm</h1>
+}
+
+
