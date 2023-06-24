@@ -34,54 +34,34 @@ public partial class QlbhContext : DbContext
     {
         modelBuilder.Entity<Category>(entity =>
         {
-            entity.HasKey(e => e.CategoryId).HasName("PK__Category__D54EE9B4FEDDD521");
-
-            entity.Property(e => e.CategoryId).ValueGeneratedNever();
+            entity.HasKey(e => e.CategoryId).HasName("PK__Category__D54EE9B419EDD3DE");
         });
 
         modelBuilder.Entity<Order>(entity =>
         {
-            entity.HasKey(e => e.OrderId).HasName("PK__Order__4659622979A1F315");
-
-            entity.Property(e => e.OrderId).ValueGeneratedNever();
-
-            entity.HasOne(d => d.OrderItemNavigation).WithMany(p => p.Orders).HasConstraintName("FK__Order__order_ite__571DF1D5");
-
-            entity.HasOne(d => d.User).WithMany(p => p.Orders).HasConstraintName("FK__Order__user_id__5629CD9C");
+            entity.HasKey(e => e.OrderId).HasName("PK__Order__465962297883DE4F");
         });
 
         modelBuilder.Entity<OrderItem>(entity =>
         {
-            entity.HasKey(e => e.OrderItem1).HasName("PK__Order_it__32745CF5A37EC49E");
-
-            entity.Property(e => e.OrderItem1).ValueGeneratedNever();
-
-            entity.HasOne(d => d.Product).WithMany(p => p.OrderItems).HasConstraintName("FK__Order_ite__produ__534D60F1");
+            entity.HasKey(e => e.OrderItem1).HasName("PK__Order_it__32745CF550C14182");
         });
 
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.ProductId).HasName("PK__Product__47027DF5F81DB02A");
+            entity.HasKey(e => e.ProductId).HasName("PK__Product__47027DF57C8A522F");
 
-            entity.Property(e => e.ProductId).ValueGeneratedNever();
-
-            entity.HasOne(d => d.Category).WithMany(p => p.Products).HasConstraintName("FK__Product__categor__5070F446");
+            entity.HasOne(d => d.Category).WithMany(p => p.Products).HasConstraintName("FK_Product_Category");
         });
 
         modelBuilder.Entity<Role>(entity =>
         {
-            entity.HasKey(e => e.RoleId).HasName("PK__Role__760965CCABDDF7B6");
-
-            entity.Property(e => e.RoleId).ValueGeneratedNever();
+            entity.HasKey(e => e.RoleId).HasName("PK__Role__760965CCB2F337A5");
         });
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserId).HasName("PK__User__B9BE370F9F35DECF");
-
-            entity.Property(e => e.UserId).ValueGeneratedNever();
-
-            entity.HasOne(d => d.Role).WithMany(p => p.Users).HasConstraintName("FK__User__role_id__4BAC3F29");
+            entity.HasKey(e => e.UserId).HasName("PK__User__B9BE370FCD6B25ED");
         });
 
         OnModelCreatingPartial(modelBuilder);

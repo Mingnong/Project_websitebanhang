@@ -24,12 +24,4 @@ public partial class Order
 
     [Column("total_price", TypeName = "decimal(10, 2)")]
     public decimal? TotalPrice { get; set; }
-
-    [ForeignKey("OrderItem")]
-    [InverseProperty("Orders")]
-    public virtual OrderItem? OrderItemNavigation { get; set; }
-
-    [ForeignKey("UserId")]
-    [InverseProperty("Orders")]
-    public virtual User? User { get; set; }
 }

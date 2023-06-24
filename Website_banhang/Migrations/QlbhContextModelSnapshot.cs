@@ -25,8 +25,11 @@ namespace Website_banhang.Migrations
             modelBuilder.Entity("Website_banhang.Models.Category", b =>
                 {
                     b.Property<int>("CategoryId")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasColumnName("category_id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryId"));
 
                     b.Property<string>("CategoryName")
                         .HasMaxLength(255)
@@ -34,7 +37,7 @@ namespace Website_banhang.Migrations
                         .HasColumnName("category_name");
 
                     b.HasKey("CategoryId")
-                        .HasName("PK__Category__D54EE9B4FEDDD521");
+                        .HasName("PK__Category__D54EE9B419EDD3DE");
 
                     b.ToTable("Category");
                 });
@@ -42,8 +45,11 @@ namespace Website_banhang.Migrations
             modelBuilder.Entity("Website_banhang.Models.Order", b =>
                 {
                     b.Property<int>("OrderId")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasColumnName("order_id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderId"));
 
                     b.Property<int?>("OrderItem")
                         .HasColumnType("int")
@@ -62,11 +68,7 @@ namespace Website_banhang.Migrations
                         .HasColumnName("user_id");
 
                     b.HasKey("OrderId")
-                        .HasName("PK__Order__4659622979A1F315");
-
-                    b.HasIndex("OrderItem");
-
-                    b.HasIndex("UserId");
+                        .HasName("PK__Order__465962297883DE4F");
 
                     b.ToTable("Order");
                 });
@@ -74,8 +76,11 @@ namespace Website_banhang.Migrations
             modelBuilder.Entity("Website_banhang.Models.OrderItem", b =>
                 {
                     b.Property<int>("OrderItem1")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasColumnName("order_item");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderItem1"));
 
                     b.Property<decimal?>("OrderPrice")
                         .HasColumnType("decimal(10, 2)")
@@ -94,9 +99,7 @@ namespace Website_banhang.Migrations
                         .HasColumnName("product_id");
 
                     b.HasKey("OrderItem1")
-                        .HasName("PK__Order_it__32745CF5A37EC49E");
-
-                    b.HasIndex("ProductId");
+                        .HasName("PK__Order_it__32745CF550C14182");
 
                     b.ToTable("Order_item");
                 });
@@ -104,8 +107,11 @@ namespace Website_banhang.Migrations
             modelBuilder.Entity("Website_banhang.Models.Product", b =>
                 {
                     b.Property<int>("ProductId")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasColumnName("product_id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductId"));
 
                     b.Property<int?>("CategoryId")
                         .HasColumnType("int")
@@ -115,16 +121,12 @@ namespace Website_banhang.Migrations
                         .HasColumnType("datetime")
                         .HasColumnName("createdAt");
 
-                    b.Property<string>("Fillter")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<bool?>("IsActive")
                         .HasColumnType("bit")
-                        .HasColumnName("isActive");
+                        .HasColumnName("is_active");
 
                     b.Property<string>("ProductDescription")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)")
+                        .HasColumnType("nvarchar(max)")
                         .HasColumnName("product_description");
 
                     b.Property<string>("ProductImage")
@@ -142,7 +144,7 @@ namespace Website_banhang.Migrations
                         .HasColumnName("product_price");
 
                     b.HasKey("ProductId")
-                        .HasName("PK__Product__47027DF5F81DB02A");
+                        .HasName("PK__Product__47027DF57C8A522F");
 
                     b.HasIndex("CategoryId");
 
@@ -152,8 +154,11 @@ namespace Website_banhang.Migrations
             modelBuilder.Entity("Website_banhang.Models.Role", b =>
                 {
                     b.Property<int>("RoleId")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasColumnName("role_id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoleId"));
 
                     b.Property<string>("RoleName")
                         .HasMaxLength(255)
@@ -161,7 +166,7 @@ namespace Website_banhang.Migrations
                         .HasColumnName("role_name");
 
                     b.HasKey("RoleId")
-                        .HasName("PK__Role__760965CCABDDF7B6");
+                        .HasName("PK__Role__760965CCB2F337A5");
 
                     b.ToTable("Role");
                 });
@@ -169,21 +174,24 @@ namespace Website_banhang.Migrations
             modelBuilder.Entity("Website_banhang.Models.User", b =>
                 {
                     b.Property<int>("UserId")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasColumnName("user_id");
 
-                    b.Property<DateTime?>("CreateAt")
-                        .HasColumnType("datetime")
-                        .HasColumnName("createAt");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
 
-                    b.Property<string>("Fillter")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)")
-                        .HasColumnName("fillter");
+                    b.Property<DateTime?>("CreatedAt")
+                        .HasColumnType("datetime")
+                        .HasColumnName("createdAt");
 
                     b.Property<bool?>("IsActive")
                         .HasColumnType("bit")
-                        .HasColumnName("isActive");
+                        .HasColumnName("is_active");
+
+                    b.Property<string>("Password")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("password");
 
                     b.Property<int?>("RoleId")
                         .HasColumnType("int")
@@ -194,53 +202,15 @@ namespace Website_banhang.Migrations
                         .HasColumnType("nvarchar(255)")
                         .HasColumnName("user_address");
 
-                    b.Property<int?>("UserAge")
-                        .HasColumnType("int")
-                        .HasColumnName("user_age");
-
-                    b.Property<string>("UserName")
+                    b.Property<string>("Username")
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)")
-                        .HasColumnName("user_name");
-
-                    b.Property<string>("UserPhone")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)")
-                        .HasColumnName("user_phone");
+                        .HasColumnName("username");
 
                     b.HasKey("UserId")
-                        .HasName("PK__User__B9BE370F9F35DECF");
-
-                    b.HasIndex("RoleId");
+                        .HasName("PK__User__B9BE370FCD6B25ED");
 
                     b.ToTable("User");
-                });
-
-            modelBuilder.Entity("Website_banhang.Models.Order", b =>
-                {
-                    b.HasOne("Website_banhang.Models.OrderItem", "OrderItemNavigation")
-                        .WithMany("Orders")
-                        .HasForeignKey("OrderItem")
-                        .HasConstraintName("FK__Order__order_ite__571DF1D5");
-
-                    b.HasOne("Website_banhang.Models.User", "User")
-                        .WithMany("Orders")
-                        .HasForeignKey("UserId")
-                        .HasConstraintName("FK__Order__user_id__5629CD9C");
-
-                    b.Navigation("OrderItemNavigation");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("Website_banhang.Models.OrderItem", b =>
-                {
-                    b.HasOne("Website_banhang.Models.Product", "Product")
-                        .WithMany("OrderItems")
-                        .HasForeignKey("ProductId")
-                        .HasConstraintName("FK__Order_ite__produ__534D60F1");
-
-                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("Website_banhang.Models.Product", b =>
@@ -248,44 +218,14 @@ namespace Website_banhang.Migrations
                     b.HasOne("Website_banhang.Models.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
-                        .HasConstraintName("FK__Product__categor__5070F446");
+                        .HasConstraintName("FK_Product_Category");
 
                     b.Navigation("Category");
-                });
-
-            modelBuilder.Entity("Website_banhang.Models.User", b =>
-                {
-                    b.HasOne("Website_banhang.Models.Role", "Role")
-                        .WithMany("Users")
-                        .HasForeignKey("RoleId")
-                        .HasConstraintName("FK__User__role_id__4BAC3F29");
-
-                    b.Navigation("Role");
                 });
 
             modelBuilder.Entity("Website_banhang.Models.Category", b =>
                 {
                     b.Navigation("Products");
-                });
-
-            modelBuilder.Entity("Website_banhang.Models.OrderItem", b =>
-                {
-                    b.Navigation("Orders");
-                });
-
-            modelBuilder.Entity("Website_banhang.Models.Product", b =>
-                {
-                    b.Navigation("OrderItems");
-                });
-
-            modelBuilder.Entity("Website_banhang.Models.Role", b =>
-                {
-                    b.Navigation("Users");
-                });
-
-            modelBuilder.Entity("Website_banhang.Models.User", b =>
-                {
-                    b.Navigation("Orders");
                 });
 #pragma warning restore 612, 618
         }

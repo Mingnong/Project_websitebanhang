@@ -24,11 +24,4 @@ public partial class OrderItem
 
     [Column("order_totalprice", TypeName = "decimal(10, 2)")]
     public decimal? OrderTotalprice { get; set; }
-
-    [InverseProperty("OrderItemNavigation")]
-    public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
-
-    [ForeignKey("ProductId")]
-    [InverseProperty("OrderItems")]
-    public virtual Product? Product { get; set; }
 }

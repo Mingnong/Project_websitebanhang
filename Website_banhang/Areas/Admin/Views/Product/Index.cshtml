@@ -6,8 +6,12 @@
 }
 @if(Model != null)
 {
-
+    <div class="d-flex justify-content-between">
 <h1>PRODUCTS</h1>
+<a class="btn btn-primary " href="@Url.Action("Create" , "Product", new { area = "Admin" })" role="button">Thêm Sản Phẩm</a>
+    </div>
+
+
 <table class="table">
     <thead>
         <tr>

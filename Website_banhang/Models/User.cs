@@ -13,38 +13,24 @@ public partial class User
     [Column("user_id")]
     public int UserId { get; set; }
 
-    [Column("user_name")]
-    [StringLength(255)]
-    public string? UserName { get; set; }
+    [Column("role_id")]
+    public int? RoleId { get; set; }
 
-    [Column("user_age")]
-    public int? UserAge { get; set; }
+    [Column("username")]
+    [StringLength(255)]
+    public string? Username { get; set; }
+
+    [Column("password")]
+    [StringLength(255)]
+    public string? Password { get; set; }
+
+    [Column("createdAt", TypeName = "datetime")]
+    public DateTime? CreatedAt { get; set; }
 
     [Column("user_address")]
     [StringLength(255)]
     public string? UserAddress { get; set; }
 
-    [Column("user_phone")]
-    [StringLength(255)]
-    public string? UserPhone { get; set; }
-
-    [Column("role_id")]
-    public int? RoleId { get; set; }
-
-    [Column("isActive")]
+    [Column("is_active")]
     public bool? IsActive { get; set; }
-
-    [Column("fillter")]
-    [StringLength(255)]
-    public string? Fillter { get; set; }
-
-    [Column("createAt", TypeName = "datetime")]
-    public DateTime? CreateAt { get; set; }
-
-    [InverseProperty("User")]
-    public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
-
-    [ForeignKey("RoleId")]
-    [InverseProperty("Users")]
-    public virtual Role? Role { get; set; }
 }

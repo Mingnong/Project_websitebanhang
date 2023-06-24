@@ -37,6 +37,19 @@ namespace Website_banhang.Controllers
             return PartialView();
         }
 
+
+        public IActionResult Search(string searchData)
+        {
+            if (!String.IsNullOrEmpty(searchData))
+            {
+                var item = _context.Products
+                    .Where(x => x.Filter.Contains(searchData))
+                    .ToList();
+                return Json(item);
+            }
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

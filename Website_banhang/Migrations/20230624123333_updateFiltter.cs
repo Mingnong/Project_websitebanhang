@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Website_banhang.Migrations
 {
     /// <inheritdoc />
-    public partial class addfillter : Migration
+    public partial class updateFiltter : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -18,7 +18,7 @@ namespace Website_banhang.Migrations
             computedColumnSql: "LOWER([product_name])",
             stored: true);
         }
-        
+
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
