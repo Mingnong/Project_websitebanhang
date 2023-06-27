@@ -3,6 +3,9 @@
 @{
     ViewData["Title"] = "Home Page";
 }
+
+
+
 <div class="input-group my-3">
     <input type="search"
            class="form-control"
@@ -50,4 +53,22 @@
                 <partial name="_partialProduct" model="@Model.ProductList" />
     </div>
 </div>
+
+
+<nav aria-label="Page navigation example" class="d-flex justify-content-center">
+    <ul class="pagination">
+        <li class="page-item">
+            <a class="page-link" href="@Url.Action("Index" , "Home", new { page = ViewBag.CurrentPage - 1})" style="
+    color: #edc7b7;
+">Previous</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="@Url.Action("Index" , "Home", new { page = ViewBag.CurrentPage + 1})" style="
+    color: #edc7b7;
+">Next</a>
+        </li>
+    </ul>
+</nav>
+
+
 <script src="~/js/site.js"></script>

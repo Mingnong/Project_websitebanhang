@@ -14,16 +14,25 @@ namespace Website_banhang.Controllers
             _context = context; 
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int page = 1)
         {
+            if (page == 0)
+            {
+                page = 1;
+            }
+
             HomeData data = new HomeData();
-            
-            var product = _context.Products.ToList();
+            int limit = 8;
+            int skip = ((page - 1) * limit);
+
+            var product = _context.Products.OrderBy(p => p.CategoryId).Skip(skip).Take(limit).ToList();
+
             var category = _context.Categories.ToList();
             
             data.ProductList = product;
             data.CategoriesList = category;
 
+            ViewBag.CurrentPage = page;
             return View(data);
         }
 

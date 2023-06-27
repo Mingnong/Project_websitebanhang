@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Website_banhang.Models;
 using Microsoft.EntityFrameworkCore;
+using Website_banhang.Areas.Admin.Authorization;
 
 namespace Website_banhang.Areas.Admin.Controllers
 {
 
     [Area("Admin")]
+    [AuthorizeAdmin]
     public class ProductController : Controller
     {
         private readonly QlbhContext _context;
@@ -34,7 +36,7 @@ namespace Website_banhang.Areas.Admin.Controllers
 
         // Update Product
         [HttpPost]
-        public IActionResult Update(int productId, Product model, bool IsActive = true)
+        public IActionResult Update(int productId, Product model, bool IsActive)
         {
             if (ModelState.IsValid)
             {

@@ -21,5 +21,10 @@ namespace Website_banhang.Controllers
             var item = _context.Products.FirstOrDefault(p => p.ProductId == ProductId);
             return View(item);
         }
+
+
+
+
+
     }
 }
