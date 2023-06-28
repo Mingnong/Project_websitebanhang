@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XcKn6Y8Xy+flYKgaxhqDAW+naAPN9jMINCnqMlB7dns=",
+  "Hash": "Fpv9PfwKQH7kI8/OSiHH2I2EmCArppENjJAoZgSsep0=",
   "Source": "Website_banhang",
   "BasePath": "_content/Website_banhang",
   "Mode": "Default",
@@ -117,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\istockphoto-1208790364-170667a.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\website15-1024x512.jpg",
+      "SourceId": "Website_banhang",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\",
+      "BasePath": "_content/Website_banhang",
+      "RelativePath": "images/website15-1024x512.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\website15-1024x512.jpg"
     },
     {
       "Identity": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\js\\site.js",

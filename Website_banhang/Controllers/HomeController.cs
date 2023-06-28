@@ -14,7 +14,7 @@ namespace Website_banhang.Controllers
             _context = context; 
         }
 
-        public IActionResult Index(int page = 1)
+        public IActionResult Index(int page = 1, int? CategoryId = null)
         {
             if (page == 0)
             {
@@ -24,14 +24,23 @@ namespace Website_banhang.Controllers
             HomeData data = new HomeData();
             int limit = 8;
             int skip = ((page - 1) * limit);
-
+            
+            
+            if(CategoryId.HasValue)
+            {
+                var product = _context.Products.Where(p => p.CategoryId == CategoryId).ToList();
+                var category = _context.Categories.ToList();
+                data.ProductList = product;
+                data.CategoriesList = category;
+            }
+            else
+            {
             var product = _context.Products.OrderBy(p => p.CategoryId).Skip(skip).Take(limit).ToList();
 
             var category = _context.Categories.ToList();
-            
             data.ProductList = product;
             data.CategoriesList = category;
-
+            }
             ViewBag.CurrentPage = page;
             return View(data);
         }

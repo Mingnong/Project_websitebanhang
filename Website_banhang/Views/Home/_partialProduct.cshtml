@@ -16,8 +16,14 @@
                 <div class="card text-center" style="width: 13rem;">
                             <a href="@Url.Action("Details", "Product", new {ProductId = item.ProductId})"><img src="@item.ProductImage" class="card-img-top" alt="..."></a>
                     <div class="card-body">
-                            <p class="card-text">@item.ProductName.</p>
-                            <p class="card-text">@item.ProductPrice.</p>
+                            <p class="card-text">@item.ProductName</p>
+                            <p class="card-text">@item.ProductPrice VND</p>
+
+                                @if (Context.Session.GetString("UserId") != null)
+                                {
+                                    <button class="addToCartButton btn btn-primary" data-productid="@item.ProductId">Thêm vào giỏ hàng</button>
+                          
+                                }
                     </div>
                 </div>
             </li>       

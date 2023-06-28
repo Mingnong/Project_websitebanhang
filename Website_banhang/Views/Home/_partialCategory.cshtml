@@ -6,25 +6,25 @@
 {
     <div class="col-md-3">
     <aside>
-            <div class="accordion" id="accordionExample">
-                @foreach(var item in Model)
-                {
-    int i = 0;  
+            <div class="accordion" id="accordionExample" disabled>
                 <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading"@i"">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse"@i""
-                            aria-expanded="true" aria-controls="collapseOne">
-                                @item.CategoryName
-                    </button>
-                </h2>
-                        <div id="collapse" @i"" class="accordion-collapse collapse show" aria-labelledby="heading"@i""
+                        <h2 class="accordion-header" id="heading">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse"
+                                    aria-expanded="true" aria-controls="collapseOne">Danh mục sản phẩm
+                            </button>
+                        </h2>
+
+
+                @foreach(var item in Model)
+                { 
+                <div id="collapse" class="accordion-collapse collapse show" aria-labelledby="heading"
                      data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <a href="" style="text-decoration: none; color: black;">Sữa tươi</a>
+                                <a href="@Url.Action("Index" , "Home" , new {CategoryId = item.CategoryId})" style="text-decoration: none; color: black;" name="CategoryId">@item.CategoryName.</a>
                     </div>
                 </div>
-            </div>                 
                 }
+            </div>                 
         </div>
     </aside>
 </div>

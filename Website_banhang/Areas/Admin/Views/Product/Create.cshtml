@@ -7,7 +7,7 @@
 <h1>Create</h1>
 
     
-<form method="POST", action="@Url.Action("Create", "Product", new { area = "Admin"})">
+<form method="POST" enctype="multipart/form-data"  action="@Url.Action("Create", "Product", new { area = "Admin"})">
     <div class="mb-3">
         <label for="product_name" class="form-label">Tên Sản Phẩm</label>
             <input type="text" class="form-control" id="product_name" name="ProductName" value="">
@@ -19,6 +19,10 @@
     <div class="mb-3">
         <label for="product_des" class="form-label">Miêu Tả Sản Phẩm</label>
             <input type="text" class="form-control" id="product_des" name="ProductDescription" value="">
+    </div>
+    <div class="mb-3">
+        <label for="product_img" class="form-label">Thêm hình ảnh</label>
+        <input type="file" class="form-control" id="product_img" name="imageFile" value="">
     </div>
 
 

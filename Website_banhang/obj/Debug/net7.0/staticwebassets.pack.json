@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\images\\istockphoto-1208790364-170667a.jpg"
     },
     {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\website15-1024x512.jpg",
+      "PackagePath": "staticwebassets\\images\\website15-1024x512.jpg"
+    },
+    {
       "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

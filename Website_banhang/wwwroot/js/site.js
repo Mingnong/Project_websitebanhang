@@ -7,7 +7,6 @@
 $(document).ready(function () {
     // lưu giá trị search hiện tại
     var currentSearchData = '';
-
     $('#searchInput').on('input', function () {
 
         // lấy value từ input
@@ -29,8 +28,6 @@ $(document).ready(function () {
                         $('#searchList').empty();
                         currentSearchData = searchData;
                     }
-
-
                     // lặp qua phần tử trong kết quả trả về từ ajax và thêm vào tag trong html
                     $.each(searchResults, function (index, result) {
                         var productId = result.productId;
@@ -46,5 +43,26 @@ $(document).ready(function () {
         }
 
     })
+
+    // xử lý thêm vào giỏ hàng
+    $('.addToCartButton').click(function () {
+        var ProductId = $(this).data('productid')
+
+        $.ajax({
+            url: '/Cart/AddToCart',
+            type: 'POST',
+            data: { ProductId: ProductId },
+            success: function () {
+                alert("Thêm sản phẩm thành công")
+            },
+            error: function () {
+                alert("Có lỗi xảy ra")
+            } 
+        })
+    })
+
+
+
+
 
 })

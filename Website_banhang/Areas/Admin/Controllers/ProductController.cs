@@ -2,6 +2,7 @@
 using Website_banhang.Models;
 using Microsoft.EntityFrameworkCore;
 using Website_banhang.Areas.Admin.Authorization;
+using Microsoft.AspNetCore.Hosting;
 
 namespace Website_banhang.Areas.Admin.Controllers
 {
@@ -10,10 +11,12 @@ namespace Website_banhang.Areas.Admin.Controllers
     [AuthorizeAdmin]
     public class ProductController : Controller
     {
+        private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly QlbhContext _context;
-        public ProductController(QlbhContext context)
+        public ProductController(QlbhContext context, IWebHostEnvironment webHostEnvironment)
         {
             _context = context;
+            _webHostEnvironment = webHostEnvironment;
         }
 
         [Route("Admin/San-Pham")]
@@ -77,7 +80,7 @@ namespace Website_banhang.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Product model)
+        public IActionResult Create(Product model, IFormFile imageFile)
         {
             if(ModelState.IsValid)
             {
@@ -92,7 +95,6 @@ namespace Website_banhang.Areas.Admin.Controllers
 
                         // dữ liệu set mặc đinh để test chức năng chưa xử lý thêm hình ảnh và danh mục
                         IsActive = true,
-                        ProductImage = "/images/download.jpg",
                         CategoryId = 1
 
                     };
@@ -100,9 +102,22 @@ namespace Website_banhang.Areas.Admin.Controllers
                     var entry = _context.Entry(product);
                     entry.State = EntityState.Added;
                     entry.Property("Filter").IsModified = false;
-
-
                     _context.SaveChanges();
+
+                    if(imageFile != null && imageFile.Length > 0)
+                    {
+                        var imagePath = Path.Combine(_webHostEnvironment.WebRootPath, "images", imageFile.FileName);
+                        using (var stream = new FileStream(imagePath, FileMode.Create))
+                        {
+                            imageFile.CopyTo(stream);
+                        }
+
+                        product.ProductImage = "/images/" + imageFile.FileName;
+                        _context.SaveChanges();
+                    }
+
+
+
 
                     return RedirectToAction("Index", "Product", new { area = "Admin" });
                 }

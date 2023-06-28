@@ -13,12 +13,12 @@ namespace Website_banhang.Controllers
             _context = context;
         }
 
+
         public IActionResult Index()
         {
             return View();
         }
 
-        // xử lý đăng ký tài khoản
         [HttpGet]
         public IActionResult Register()
         {
@@ -27,6 +27,7 @@ namespace Website_banhang.Controllers
 
 
 
+        // xử lý đăng ký tài khoản
         [HttpPost]
         public IActionResult Register(User model)
         {
@@ -64,6 +65,9 @@ namespace Website_banhang.Controllers
 
             return View();
         }
+
+
+
         // Xử lý đăng nhập
         [HttpPost]
         public IActionResult Login(string Username, string Password )
@@ -91,12 +95,27 @@ namespace Website_banhang.Controllers
                     }
                     return RedirectToAction("Index", "Home", new {area = "Admin"});
                 }
-                return RedirectToAction("Index", "Home");
+                else
+                {
+                    if (HttpContext.Session.GetString("UserId") == null)
+                    {
+                        HttpContext.Session.SetString("UserId", existUser.UserId.ToString());
+                    }
+                    return RedirectToAction("Index", "Home");
+                }
             }
         }
 
 
+        // Xử lý Log-out
 
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Remove("UserId");
+            Response.Cookies.Delete("CartList");
+
+            return RedirectToAction("Index", "Home");
+        }
 
 
 
