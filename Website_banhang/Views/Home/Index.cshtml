@@ -6,17 +6,9 @@
 
 
 
-<div class="input-group my-3">
-    <input type="search"
-           class="form-control"
-           placeholder="Tìm kiếm sản phẩm..."
-           aria-label="Search"
-           id="searchInput" />
-    <ul id="searchList" style="position: absolute; top: 100%; left: 0; right: 0; background-color: white; z-index: 999;"></ul>
-</div>
 <!--BODY -->
 <!-- Carousel-->
-    <div id="carouselExampleIndicators" class="carousel slide my-5" data-bs-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide" style="margin-top: 8rem" data-bs-ride="carousel">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -24,13 +16,13 @@
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="~/images/istockphoto-1208790364-170667a.jpg" class="d-block w-100" alt="...">
+            <img src="~/images/Summer.jpg" class="d-block w-100 h-100 img-fluid" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="~/images/istockphoto-1208790364-170667a.jpg" class="d-block w-100" alt="...">
+            <img src="~/images/Summer.jpg" class="d-block w-100 h-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="~/images/istockphoto-1208790364-170667a.jpg" class="d-block w-100" alt="...">
+            <img src="~/images/Summer.jpg" class="d-block w-100 h-100" alt="...">
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -45,7 +37,7 @@
 
 
 <!-- Aside -->
-<div class="container my-5">
+<div class="container mt-5">
     <!-- Stack the columns on mobile by making one full-width and the other half-width -->
     <div class="row">
                 <partial name="_partialCategory" model="@Model.CategoriesList" />         
@@ -57,14 +49,14 @@
 
 <nav aria-label="Page navigation example" class="d-flex justify-content-center">
     <ul class="pagination">
-        <li class="page-item">
-            <a class="page-link" href="@Url.Action("Index" , "Home", new { page = ViewBag.CurrentPage - 1})" style="
-    color: #edc7b7;
+        <li class="page-item"">
+            <a  class="page-link" href="@Url.Action("Index" , "Home", new { page = ViewBag.CurrentPage - 1})" style="
+    color: #E4002A;
 ">Previous</a>
         </li>
         <li class="page-item">
             <a class="page-link" href="@Url.Action("Index" , "Home", new { page = ViewBag.CurrentPage + 1})" style="
-    color: #edc7b7;
+    color: #E4002A;
 ">Next</a>
         </li>
     </ul>

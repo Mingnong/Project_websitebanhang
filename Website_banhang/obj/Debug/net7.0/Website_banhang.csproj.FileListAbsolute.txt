@@ -251,3 +251,4 @@ C:\Users\duong\OneDrive\Máy tính\Project_practice\Website_banhang\Website_banh
 C:\Users\duong\OneDrive\Máy tính\Project_practice\Website_banhang\Website_banhang\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\duong\OneDrive\Máy tính\Project_practice\Website_banhang\Website_banhang\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\duong\OneDrive\Máy tính\Project_practice\Website_banhang\Website_banhang\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\duong\OneDrive\Máy tính\Project_practice\Website_banhang\Website_banhang\obj\Debug\net7.0\scopedcss\Views\Shared\_LayoutCopy.cshtml.rz.scp.css

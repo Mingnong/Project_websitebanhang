@@ -34,7 +34,7 @@ $(document).ready(function () {
                         var productName = result.productName;
                         var productPrice = result.productPrice;
 
-                        var search = `<li><a href="/Product/Details?ProductId=${productId}">${productName} ${productPrice}</a></li>`;
+                        var search = `<li style="text-decoration: none"><a href="/Product/Details?ProductId=${productId}">${productName} ${productPrice}</a></li>`;
                         $('#searchList').append(search);
                     });
 

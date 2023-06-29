@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Fpv9PfwKQH7kI8/OSiHH2I2EmCArppENjJAoZgSsep0=",
+  "Hash": "R5EHqpWJHOlRwLeROgf2Zc2hQdWoYN+8V18YWBXSWKo=",
   "Source": "Website_banhang",
   "BasePath": "_content/Website_banhang",
   "Mode": "Default",
@@ -85,6 +85,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\123.jpg",
+      "SourceId": "Website_banhang",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\",
+      "BasePath": "_content/Website_banhang",
+      "RelativePath": "images/123.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\123.jpg"
+    },
+    {
       "Identity": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\download.jpg",
       "SourceId": "Website_banhang",
       "SourceType": "Discovered",
@@ -117,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\istockphoto-1208790364-170667a.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\Summer.jpg",
+      "SourceId": "Website_banhang",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\",
+      "BasePath": "_content/Website_banhang",
+      "RelativePath": "images/Summer.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Summer.jpg"
     },
     {
       "Identity": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\website15-1024x512.jpg",

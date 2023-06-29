@@ -5,7 +5,7 @@ using System.Linq;
 using Website_banhang.Models;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Authorization;
-
+using Humanizer;
 
 namespace Website_banhang.Controllers
 {
@@ -23,7 +23,26 @@ namespace Website_banhang.Controllers
 
         public IActionResult Cart()
         {
-            return View();
+            // lấy dữ liệu của cookie về
+            List<CartList> CartList = GetListFromCookie();
+            // lọc lấy danh sách productId trong cookie để query xuống database
+            List<int> productIDs = CartList.Select(i => i.ProductId).ToList();
+
+            var products = _context.Products.Where(p => productIDs.Contains(p.ProductId)).ToList();
+
+            var cartProducts = CartList.Join(products,
+                CartList => CartList.ProductId,
+                products => products.ProductId,
+                (CartList, products) => new CartProduct
+                {
+                    ProductId = CartList.ProductId,
+                    ProductName = products.ProductName,
+                    Quantity = CartList.Quantity,
+                    Price = products.ProductPrice,
+                    Image = products.ProductImage
+                }).ToList();
+
+            return View(cartProducts);
         }
 
 

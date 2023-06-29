@@ -104,14 +104,19 @@ namespace Website_banhang.Areas.Admin.Controllers
                     entry.Property("Filter").IsModified = false;
                     _context.SaveChanges();
 
+                    // kiểm tra xe file anhe có bị nul hay là không
                     if(imageFile != null && imageFile.Length > 0)
-                    {
+                    {   
+
+                        // tạo đường dẫn dến thư mục lưu ảnh
                         var imagePath = Path.Combine(_webHostEnvironment.WebRootPath, "images", imageFile.FileName);
+
+                        // tạo luồng để lưu ảnh vào đường dẫn
                         using (var stream = new FileStream(imagePath, FileMode.Create))
                         {
                             imageFile.CopyTo(stream);
                         }
-
+                        // lưu đường dẫn vào database
                         product.ProductImage = "/images/" + imageFile.FileName;
                         _context.SaveChanges();
                     }
