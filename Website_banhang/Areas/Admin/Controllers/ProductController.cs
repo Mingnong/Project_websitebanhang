@@ -95,7 +95,7 @@ namespace Website_banhang.Areas.Admin.Controllers
 
                         // dữ liệu set mặc đinh để test chức năng chưa xử lý thêm hình ảnh và danh mục
                         IsActive = true,
-                        CategoryId = 1
+                        CategoryId = 8
 
                     };
 

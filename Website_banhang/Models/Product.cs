@@ -21,7 +21,7 @@ public partial class Product
     public string? ProductDescription { get; set; }
 
     [Column("is_active")]
-    public bool IsActive { get; set; }
+    public bool? IsActive { get; set; }
 
     [Column("product_price", TypeName = "decimal(10, 2)")]
     public decimal? ProductPrice { get; set; }
@@ -36,8 +36,7 @@ public partial class Product
     [Column("createdAt", TypeName = "datetime")]
     public DateTime? CreatedAt { get; set; }
 
-    [Column("Filter")]
-    [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+    [StringLength(255)]
     public string? Filter { get; set; }
 
     [ForeignKey("CategoryId")]

@@ -13,24 +13,120 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\123.jpg",
-      "PackagePath": "staticwebassets\\images\\123.jpg"
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\1-Fried-Chicken.jpg",
+      "PackagePath": "staticwebassets\\images\\1-Fried-Chicken.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\2-Fried-Chicken.jpg",
+      "PackagePath": "staticwebassets\\images\\2-Fried-Chicken.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\2-Skewers.jpg",
+      "PackagePath": "staticwebassets\\images\\2-Skewers.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\3-Fishsticks.jpg",
+      "PackagePath": "staticwebassets\\images\\3-Fishsticks.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\3-Fried-Chicken.jpg",
+      "PackagePath": "staticwebassets\\images\\3-Fried-Chicken.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\3-HW.jpg",
+      "PackagePath": "staticwebassets\\images\\3-HW.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\3_Nuggests.jpg",
+      "PackagePath": "staticwebassets\\images\\3_Nuggests.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\4-Chewy-Cheese.jpg",
+      "PackagePath": "staticwebassets\\images\\4-Chewy-Cheese.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\5-HW.jpg",
+      "PackagePath": "staticwebassets\\images\\5-HW.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\6-Fried-Chicken-new.jpg",
+      "PackagePath": "staticwebassets\\images\\6-Fried-Chicken-new.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\BJ.jpg",
+      "PackagePath": "staticwebassets\\images\\BJ.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\Burger-Flava.jpg",
+      "PackagePath": "staticwebassets\\images\\Burger-Flava.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\Burger-Shrimp.jpg",
+      "PackagePath": "staticwebassets\\images\\Burger-Shrimp.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\Burger-Zinger.jpg",
+      "PackagePath": "staticwebassets\\images\\Burger-Zinger.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\CL-(R)-new.jpg",
+      "PackagePath": "staticwebassets\\images\\CL-(R)-new.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\FF-L.jpg",
+      "PackagePath": "staticwebassets\\images\\FF-L.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\FF-R.jpg",
+      "PackagePath": "staticwebassets\\images\\FF-R.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\MOD-PHI-LE-GA-QUAY.jpg",
+      "PackagePath": "staticwebassets\\images\\MOD-PHI-LE-GA-QUAY.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\MP-(R)-new.jpg",
+      "PackagePath": "staticwebassets\\images\\MP-(R)-new.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\MY-Y-POP.jpg",
+      "PackagePath": "staticwebassets\\images\\MY-Y-POP.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\MY-Y-ZINGER.jpg",
+      "PackagePath": "staticwebassets\\images\\MY-Y-ZINGER.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\POP-R.jpg",
+      "PackagePath": "staticwebassets\\images\\POP-R.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\Rice-Skewer.jpg",
+      "PackagePath": "staticwebassets\\images\\Rice-Skewer.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\Rice-Steak.jpg",
+      "PackagePath": "staticwebassets\\images\\Rice-Steak.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\Rice-TENDERODS.jpg",
+      "PackagePath": "staticwebassets\\images\\Rice-TENDERODS.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\Rice-Teriyaki.jpg",
+      "PackagePath": "staticwebassets\\images\\Rice-Teriyaki.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\SALAD-HAT-GA-VIEN.jpg",
+      "PackagePath": "staticwebassets\\images\\SALAD-HAT-GA-VIEN.jpg"
+    },
+    {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\SALAD-HAT.jpg",
+      "PackagePath": "staticwebassets\\images\\SALAD-HAT.jpg"
     },
     {
       "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\Summer.jpg",
       "PackagePath": "staticwebassets\\images\\Summer.jpg"
-    },
-    {
-      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\download.jpg",
-      "PackagePath": "staticwebassets\\images\\download.jpg"
-    },
-    {
-      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\istockphoto-1208790364-170667a.jpg",
-      "PackagePath": "staticwebassets\\images\\istockphoto-1208790364-170667a.jpg"
-    },
-    {
-      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\website15-1024x512.jpg",
-      "PackagePath": "staticwebassets\\images\\website15-1024x512.jpg"
     },
     {
       "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\js\\site.js",

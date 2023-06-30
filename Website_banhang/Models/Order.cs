@@ -16,12 +16,12 @@ public partial class Order
     [Column("user_id")]
     public int? UserId { get; set; }
 
-    [Column("order_item")]
-    public int? OrderItem { get; set; }
-
     [Column("purchase_date", TypeName = "date")]
     public DateTime? PurchaseDate { get; set; }
 
     [Column("total_price", TypeName = "decimal(10, 2)")]
     public decimal? TotalPrice { get; set; }
+
+    [InverseProperty("Order")]
+    public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 }

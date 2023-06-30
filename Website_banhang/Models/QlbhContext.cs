@@ -51,7 +51,11 @@ public partial class QlbhContext : DbContext
         {
             entity.HasKey(e => e.ProductId).HasName("PK__Product__47027DF57C8A522F");
 
-            entity.HasOne(d => d.Category).WithMany(p => p.Products).HasConstraintName("FK_Product_Category");
+            entity.Property(e => e.Filter).HasComputedColumnSql("(lower([product_name]))", true);
+
+            entity.HasOne(d => d.Category).WithMany(p => p.Products)
+                .OnDelete(DeleteBehavior.Cascade)
+                .HasConstraintName("FK_Product_Category");
         });
 
         modelBuilder.Entity<Role>(entity =>

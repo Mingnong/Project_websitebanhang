@@ -18,7 +18,7 @@ namespace Website_banhang.Controllers
         public CartController(QlbhContext context)
         {
             _context = context;
-        } 
+        }
 
 
         public IActionResult Cart()
@@ -46,9 +46,6 @@ namespace Website_banhang.Controllers
         }
 
 
-
-
-
         [HttpPost]
         // xử lí action thêm sản phẩm vào giỏ hàng (thêm sản phẩm vào cookie)
         public IActionResult AddToCart(int ProductId)
@@ -56,16 +53,18 @@ namespace Website_banhang.Controllers
             List<CartList> cartList = GetListFromCookie();
 
             CartList existItem = cartList.Find(x => x.ProductId == ProductId);
-            if(existItem != null)
+            if (existItem != null)
             {
                 existItem.Quantity += 1;
             }
             else
             {
+                Product product = _context.Products.FirstOrDefault(p => p.ProductId == ProductId);
                 CartList cartlist = new CartList()
                 {
                     ProductId = ProductId,
                     Quantity = 1,
+                    Price = product.ProductPrice
                 };
                 cartList.Add(cartlist);
             }
@@ -88,8 +87,8 @@ namespace Website_banhang.Controllers
             }
             else
             {
-            return new List<CartList>();
-    
+                return new List<CartList>();
+
             }
         }
 
@@ -106,5 +105,25 @@ namespace Website_banhang.Controllers
                 SameSite = SameSiteMode.Strict
             });
         }
+
+        // Xóa sản phẩm trong Cart
+
+        [HttpPost]
+
+        public IActionResult DeleteCart(int productId)
+        {
+            List<CartList > cartList = GetListFromCookie();
+            CartList ItemToremove = cartList.FirstOrDefault(x => x.ProductId == productId);
+
+            if(ItemToremove != null)
+            {
+                cartList.Remove(ItemToremove);
+                SaveListToCookie(cartList);
+            }
+            return RedirectToAction("Cart");
+        }
+
+
+
     }
 }
