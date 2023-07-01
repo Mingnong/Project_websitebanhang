@@ -54,12 +54,11 @@ namespace Website_banhang.Controllers
 
 
             // lưu thông tin chi tiết vào bảng OrderItem
-
             foreach (var item in cartLists)
             {
                 OrderItem orderItem = new OrderItem()
                 {
-                    OrderItem1 = 1,
+                    OrderItem1 = GenerateRandomOrderId(),
                     OrderId = order.OrderId,
                     ProductId = item.ProductId,
                     OrderQuantity = item.Quantity,
@@ -122,6 +121,13 @@ namespace Website_banhang.Controllers
             {
                 return new List<CartList>();
             }
+        }
+
+        public int GenerateRandomOrderId()
+        {
+            Random random = new Random();
+            int orderId = random.Next(1, 999999);
+            return orderId;
         }
 
     }

@@ -35,7 +35,7 @@ namespace Website_banhang.Controllers
             }
             else
             {
-            var product = _context.Products.OrderBy(p => p.CategoryId).Skip(skip).Take(limit).ToList();
+            var product = _context.Products.Where(p => p.IsActive == true).Skip(skip).Take(limit).ToList();
 
             var category = _context.Categories.ToList();
             data.ProductList = product;

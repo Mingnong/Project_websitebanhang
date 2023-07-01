@@ -129,6 +129,10 @@
       "PackagePath": "staticwebassets\\images\\Summer.jpg"
     },
     {
+      "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\download.jpg",
+      "PackagePath": "staticwebassets\\images\\download.jpg"
+    },
+    {
       "Id": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

@@ -4,5 +4,35 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>OrderConfirm</h1>
+@model OrderConfirmationViewModel
+
+<h1>Order Confirmation</h1>
+
+<h2>Order Details</h2>
+<p>ID: @Model.Order.OrderId</p>
+<p>Tổng thành tiền: @Model.Order.TotalPrice VND</p>
+<p>Ngày mua hàng: @Model.Order.PurchaseDate</p>
+
+<h2>Chi tiết sản phẩm</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Sản Phẩm</th>
+            <th>Số lượng</th>
+            <th>Giá</th>
+            <th>Tổng tiền</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.OrderItems)
+        {
+            <tr>
+                <td>@item.ProductId</td>
+                <td>@item.OrderQuantity</td>
+                <td>@item.OrderPrice</td>
+                <td>@item.OrderTotalprice</td>
+            </tr>
+        }
+    </tbody>
+</table>
 

@@ -46,8 +46,7 @@ namespace Website_banhang.Areas.Admin.Controllers
                 try
                 {
                     var item = _context.Products.FirstOrDefault(x => x.ProductId == productId);
-                    
-                    if(item != null)
+                    if (item != null)
                     {
                         item.ProductName = model.ProductName;
                         item.ProductDescription = model.ProductDescription;

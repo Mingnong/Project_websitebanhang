@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Website_banhang.Models.Order>
+
+@{
+    ViewData["Title"] = "GetOrder";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-striped" style="margin-top: 8rem">
+    <thead>
+        <tr>
+            <th>ID đơn hàng</th>
+            <th>Ngày mua</th>
+            <th>Tổng thành tiền đơn hàng</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            
+            <tr>          
+                <td>@item.OrderId</td>
+                <td>@item.PurchaseDate</td>
+                <td>@item.TotalPrice</td>
+                <td><a href="@Url.Action("OrderDetail" , "UserOrder", new { orderId = item.OrderId})">Chi tiết</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

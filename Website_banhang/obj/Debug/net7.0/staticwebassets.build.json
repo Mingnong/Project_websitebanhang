@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "loGoUxZu5CeGH9wX0MfYdeWiRJPdwGWsaolsFf8b21k=",
+  "Hash": "8YlwdIbnvkErK7TgIsCLzSipQW8lyDxdxiWZ4M8afwE=",
   "Source": "Website_banhang",
   "BasePath": "_content/Website_banhang",
   "Mode": "Default",
@@ -338,6 +338,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\CL-(R)-new.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\download.jpg",
+      "SourceId": "Website_banhang",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\",
+      "BasePath": "_content/Website_banhang",
+      "RelativePath": "images/download.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\download.jpg"
     },
     {
       "Identity": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\FF-L.jpg",

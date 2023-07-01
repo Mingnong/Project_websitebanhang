@@ -24,11 +24,11 @@
     </div>
 
 
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="IsActive" name="IsActive" checked="@Model.IsActive">
-            <label class="form-check-label" for="IsActive">Hiện Sản Phẩm</label>
-        </div>
 
+        <select id="IsActive" name="IsActive" checked="@Model.IsActive">
+            <option value="True">Hiện sản phẩm</option>
+            <option value="False">Ẩn sản phẩm</option>
+        </select>
 
     <button type="submit" class="btn btn-primary">Submit</button>
     </form>
