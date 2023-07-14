@@ -41,6 +41,7 @@ namespace Website_banhang.Controllers
             data.ProductList = product;
             data.CategoriesList = category;
             }
+
             ViewBag.CurrentPage = page;
             return View(data);
         }
@@ -61,7 +62,7 @@ namespace Website_banhang.Controllers
             if (!String.IsNullOrEmpty(searchData))
             {
                 var item = _context.Products
-                    .Where(x => x.Filter.Contains(searchData))
+                    .Where(x => x.Filter.Contains(searchData) && x.IsActive == true)
                     .ToList();
                 return Json(item);
             }

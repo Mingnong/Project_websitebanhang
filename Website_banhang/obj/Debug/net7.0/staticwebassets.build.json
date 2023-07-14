@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8YlwdIbnvkErK7TgIsCLzSipQW8lyDxdxiWZ4M8afwE=",
+  "Hash": "waVs3u/Hyd6igGl4NMS3Oiyxwj5OJ4oU00fGKAMVJ6k=",
   "Source": "Website_banhang",
   "BasePath": "_content/Website_banhang",
   "Mode": "Default",
@@ -593,6 +593,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Summer.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\images\\test.jpg",
+      "SourceId": "Website_banhang",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\",
+      "BasePath": "_content/Website_banhang",
+      "RelativePath": "images/test.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\test.jpg"
     },
     {
       "Identity": "C:\\Users\\duong\\OneDrive\\Máy tính\\Project_practice\\Website_banhang\\Website_banhang\\wwwroot\\js\\site.js",
