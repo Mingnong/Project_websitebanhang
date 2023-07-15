@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Website_banhang.Models;
+using Website_banhang.Services;
 
 namespace Website_banhang.Controllers
 {
@@ -8,10 +9,12 @@ namespace Website_banhang.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly QlbhContext _context;
-        public HomeController(ILogger<HomeController> logger, QlbhContext context)
+        private readonly IProductService _productService;
+        public HomeController(ILogger<HomeController> logger, QlbhContext context, IProductService productService)
         {
             _logger = logger;
-            _context = context; 
+            _context = context;
+            _productService = productService;
         }
 
         public IActionResult Index(int page = 1, int? CategoryId = null)
@@ -22,22 +25,22 @@ namespace Website_banhang.Controllers
             }
 
             HomeData data = new HomeData();
-            int limit = 8;
-            int skip = ((page - 1) * limit);
+            int take = 8;
+            int skip = ((page - 1) * take);
             
             
-            if(CategoryId.HasValue)
+            if(CategoryId != null)
             {
-                var product = _context.Products.Where(p => p.CategoryId == CategoryId).ToList();
+                var product = _productService.GetProductBycategory(CategoryId);
                 var category = _context.Categories.ToList();
                 data.ProductList = product;
                 data.CategoriesList = category;
             }
             else
             {
-            var product = _context.Products.Where(p => p.IsActive == true).Skip(skip).Take(limit).ToList();
+            var product = _productService.GetAllProduct(skip, take);
 
-            var category = _context.Categories.ToList();
+                var category = _context.Categories.ToList();
             data.ProductList = product;
             data.CategoriesList = category;
             }

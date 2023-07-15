@@ -2,11 +2,17 @@ using Website_banhang.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Session;
+using Website_banhang.Services;
+using Microsoft.Extensions.DependencyInjection;
+using Website_banhang.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddTransient<IProductRepository, ProductRepository>();
+builder.Services.AddTransient<IProductService, ProductService>();
 
 builder.Services.AddDbContext<QlbhContext>(o =>
 {
